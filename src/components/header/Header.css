@@ -1,0 +1,15 @@
+.header {
+    background-color: #ff742b;
+    height: 67px;
+}
+
+.header-search {
+    padding: 7px;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15%;
+}
