@@ -1,0 +1,13 @@
+.search-power {
+    color: rgba(33,36,61,.5);
+    font-size: 15px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+}
+
+.search-power span {
+    pointer-events: none;
+}

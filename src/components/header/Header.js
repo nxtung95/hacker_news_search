@@ -1,6 +1,10 @@
 import React from 'react';
 import Logo from '../logo/Logo';
 import LogoName from '../logo/LogoName';
+import SearchIcon from '../search/SearchIcon';
+import SearchInput from '../search/SearchInput';
+import SearchPower from '../search/SearchPower';
+import Setting from '../setting/Setting';
 import './Header.css';
 
 const header = () => {
@@ -11,6 +15,12 @@ const header = () => {
                     <Logo />
                     <LogoName />
                 </a>
+                <div className="search-bar">
+                    <SearchIcon />
+                    <SearchInput />
+                    <SearchPower />
+                </div>
+                 <Setting />
             </div>
         </header>
     );
