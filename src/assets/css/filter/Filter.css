@@ -1,0 +1,16 @@
+.filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.filter .filter-condition {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter .engine-process {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 13px;
+}

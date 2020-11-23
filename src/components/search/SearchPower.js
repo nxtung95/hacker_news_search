@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchTool from '../tool/SearchTool';
-import './SearchPower.css';
+import '../.././assets/css/search/SearchPower.css';
 
 const searchPower = () => {
     return (

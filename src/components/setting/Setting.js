@@ -1,5 +1,5 @@
 import React from 'react';
-import './Setting.css';
+import '../.././assets/css/setting/Setting.css';
 
 const setting = () => {
     return (
