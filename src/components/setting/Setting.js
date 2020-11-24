@@ -4,7 +4,7 @@ import '../.././assets/css/setting/Setting.css';
 const setting = () => {
     return (
         <a className="setting" href="/settings">
-            <i class="fa fa-gear"></i>
+            <i className="fa fa-gear"></i>
             <span>Settings</span>
         </a>
     );

@@ -6,7 +6,7 @@ const filterPopularity = () => {
         <div className='filter-popularity'>
             <span>by</span>
             <select name="filter-popularity">
-                <option selected>Popularity</option>
+                <option defaultValue>Popularity</option>
                 <option>Date</option>
             </select>
         </div>

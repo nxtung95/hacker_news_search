@@ -11,6 +11,7 @@
 
 .filter-time select {
     height: 25px;
+    background-color: #f6f6ef;
 }
 
 .filter-time option {

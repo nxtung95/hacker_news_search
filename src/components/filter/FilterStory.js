@@ -7,7 +7,7 @@ const filterStory = () => {
             <span>Search</span>
             <select name="filter-story">
                 <option>All</option>
-                <option selected="selected">Story</option>
+                <option defaultValue>Story</option>
                 <option>Comment</option>
             </select>
         </div>
