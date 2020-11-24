@@ -5,7 +5,7 @@ import Story from './Story';
 const result = () => {
     return (
         <section className="search-result">
-            <div className="SearchResult-container">
+            <div className="container">
                 <Story />
             </div>
         </section>

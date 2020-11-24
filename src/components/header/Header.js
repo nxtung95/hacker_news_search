@@ -6,7 +6,6 @@ import SearchInput from '../search/SearchInput';
 import SearchPower from '../search/SearchPower';
 import Setting from '../setting/Setting';
 import '../.././assets/css/header/Header.css';
-import Filter from '../filter/Filter';
 
 const header = () => {
     return (
@@ -23,7 +22,6 @@ const header = () => {
                 </div>
                  <Setting />
             </div>
-            <Filter />
         </header>
     );
 }

@@ -1,3 +1,7 @@
 .search-result {
     background-color: #f6f6ef;
 }
+
+.search-result .container {
+    margin: 10px 10px 5px 10px;
+}
