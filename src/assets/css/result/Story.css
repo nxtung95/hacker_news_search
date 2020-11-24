@@ -1,0 +1,14 @@
+.story {
+    font-size: 14px;
+    padding: 0 16px;
+    min-height: 40px;
+}
+
+.story .story-container {
+    display: flex;
+    align-items: center;
+}
+
+.story .story-data {
+    margin: 4px 0;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../.././assets/css/result/StoryMeta.css';
 
 const meta = () => {
     return (

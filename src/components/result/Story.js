@@ -1,6 +1,7 @@
 import React from 'react';
 import StoryTitle from './StoryTitle';
 import StoryMeta from './StoryMeta';
+import '../.././assets/css/result/Story.css';
 
 const story = () => {
     return (

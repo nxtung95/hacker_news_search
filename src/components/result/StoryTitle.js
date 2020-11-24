@@ -1,10 +1,11 @@
 import React from 'react';
+import '../.././assets/css/result/StoryTitle.css';
 
 const title = () => {
     return (
         <div className="story-title">
             <a href="https://news.ycombinator.com/item?id=16582136">Stephen Hawking has died</a>
-            <a href="http://www.bbc.com/news/uk-43396008" className="story-link">(http://www.bbc.com/news/uk-43396008)</a>
+            <a href="http://www.bbc.com/news/uk-43396008" className="story-link" target="_blank">(http://www.bbc.com/news/uk-43396008)</a>
         </div>
     );
 }
