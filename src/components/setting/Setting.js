@@ -3,10 +3,10 @@ import '../.././assets/css/setting/Setting.css';
 
 const setting = () => {
     return (
-        <a className="setting" href="/settings">
+        <React.Fragment>
             <i className="fa fa-gear"></i>
             <span>Settings</span>
-        </a>
+        </React.Fragment>
     );
 }
 

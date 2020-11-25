@@ -3,6 +3,8 @@ import './HackerNewsSearch.css';
 import Header from './components/header/Header';
 import SearchResult from './components/result/SearchResult';
 import Filter from './components/filter/Filter';
+import Pagination from './components/pagination/Pagination';
+import Footer from './components/footer/Footer';
 
 export default class HackerNewsSearch extends React.Component {
     render() {
@@ -11,6 +13,8 @@ export default class HackerNewsSearch extends React.Component {
                 <Header />
                 <Filter />
                 <SearchResult />
+                <Pagination />
+                <Footer />
             </div>
         );
     }

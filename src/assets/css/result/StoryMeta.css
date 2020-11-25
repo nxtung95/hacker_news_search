@@ -6,6 +6,10 @@
     color: #696969;
 }
 
+.story-meta a:hover {
+    text-decoration: underline;
+}
+
 .story-meta .story-separator {
     margin: 0 5px;
     color: #696969;

@@ -7,6 +7,11 @@ const result = () => {
         <section className="search-result">
             <div className="container">
                 <Story />
+                <Story />
+                <Story />
+                <Story />
+                <Story />
+                <Story />
             </div>
         </section>
     );

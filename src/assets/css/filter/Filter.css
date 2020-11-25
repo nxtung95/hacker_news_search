@@ -1,7 +1,7 @@
 .filter {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    padding: 10px 10px;
     background-color: #f6f6ef;
 }
 

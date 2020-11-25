@@ -6,15 +6,13 @@
 
 .filter-story span {
     font-size: 13px;
-    margin-right: 10px;
 }
 
-.filter-story select {
-    height: 25px;
-    background-color: #f6f6ef;
+.filter-story .dropdown {
+    margin-left: 4px;
 }
 
-.filter-story option {
+.dropdown .dropdown-label {
     font-size: 14px;
     padding: 0 4px 0 8px;
     margin: 0 8px 0 2px;
@@ -25,4 +23,21 @@
     color: #5c5c5c;
     text-align: right;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-label svg {
+    width: 14px;
+    margin-left: 4px;
+}
+
+.dropdown-list {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 500;
+    background-color: #fff;
+    color: #5c5c5c;
 }

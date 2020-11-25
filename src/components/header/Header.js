@@ -20,7 +20,9 @@ const header = () => {
                     <SearchInput />
                     <SearchPower />
                 </div>
-                 <Setting />
+                <a className="setting" href="/settings">
+                    <Setting />
+                </a>
             </div>
         </header>
     );

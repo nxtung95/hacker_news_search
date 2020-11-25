@@ -17,3 +17,7 @@
     word-break: break-all;
 }
 
+.story-title .story-link:hover {
+    text-decoration: underline;
+}
+
