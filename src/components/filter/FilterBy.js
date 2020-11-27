@@ -1,6 +1,6 @@
 import React from 'react';
 import '../.././assets/css/filter/Filter.css';
-import DateRange from 'react-date-range';
+import DatePicker from '../date/DatePicker';
 
 export default class FilterBy extends React.Component {
     constructor(props) {
@@ -22,7 +22,7 @@ export default class FilterBy extends React.Component {
     changeValue = (valSearch) => {
         this.setState({
             search: valSearch,
-            datepicker: true,
+            datepicker: valSearch === 'Custom range' ? true : false,
         });
     }
 
@@ -72,9 +72,9 @@ export default class FilterBy extends React.Component {
                                 </React.Fragment>
                             )
                         }
-                        <DateRange />
                     </ul>
                 </div>
+                {this.state.datepicker && <DatePicker />}
             </div>
         );
     }

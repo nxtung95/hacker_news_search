@@ -12,9 +12,9 @@ export default class HackerNewsSearch extends React.Component {
             <div className="container">
                 <Header />
                 <Filter />
-                {/* <SearchResult />
+                <SearchResult />
                 <Pagination />
-                <Footer /> */}
+                <Footer />
             </div>
         );
     }

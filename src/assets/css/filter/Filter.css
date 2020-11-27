@@ -19,6 +19,7 @@
 .filter-by {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .filter-by span {
@@ -78,32 +79,6 @@
     transform: translate(0);
     transition: all .3s;
 }
-
-/* .dropdown-list::before {
-    content: "";
-    width: 0;
-    height: 0;
-    z-index: 500;
-    bottom: 100%;
-    position: absolute;
-    border-style: solid;
-    right: 13px;
-    border-color: #c3c3c3 transparent;
-    border-width: 0 8px 8px;
-}
-
-.dropdown-list::after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: 100%;
-    border-style: solid;
-    z-index: 500;
-    right: 15px;
-    border-color: #fff;
-    border-width: 0 6px 6px;
-} */
 
 .dropdown-list li {
     font-size: 14px
