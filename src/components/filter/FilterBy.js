@@ -13,10 +13,25 @@ export default class FilterBy extends React.Component {
         };
     }
 
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClickOutside);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+    // handleClickOutside = event => {
+    //     console.log(event.target);
+    //     if (this.pulldown && !this.pulldown.contains(event.target)) {
+    //         this.expandedPullDown();
+    //     }
+    // }
+
     expandedPullDown = () => {
-        this.setState({
-            expanded: !this.state.expanded,
-        });
+        this.setState(prevState => ({
+            expanded: !prevState.expanded
+        }));
     }
 
     changeValue = (valSearch) => {
@@ -26,28 +41,35 @@ export default class FilterBy extends React.Component {
         });
     }
 
+    closeDatePicker = () => {
+        this.setState({
+            datepicker: false,
+        });
+    }
+
     render() {
         return (
             <div className='filter-by'>
                 <span>{this.props.label}</span>
-                <div className="dropdown" 
-                    role="combobox" 
+                <div className="dropdown"
+                    role="combobox"
                     aria-expanded={this.state.expanded}
                     aria-controls="group"
                     onClick={this.expandedPullDown}
+                    ref={node => { this.pulldown = node; }}
                 >
                     <label className="dropdown-label">
                         {this.state.search}
-                        <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        width="24" 
-                        height="24" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        strokeWidth="2" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round">
                             {
                                 this.state.expanded ? <polyline points="18 15 12 9 6 15"></polyline> : <polyline points="6 9 12 15 18 9"></polyline>
                             }
@@ -74,7 +96,7 @@ export default class FilterBy extends React.Component {
                         }
                     </ul>
                 </div>
-                {this.state.datepicker && <DatePicker />}
+                {this.state.datepicker && <DatePicker callback={this.closeDatePicker} />}
             </div>
         );
     }

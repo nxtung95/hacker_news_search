@@ -1,3 +1,42 @@
 .result-time {
     margin-right: 20px;
 }
+
+.social-share {
+    position: relative;
+}
+
+.social-share .dropdown {
+    position: relative;
+}
+
+.social-share ul {
+    width: 220px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.social-share .dropdown-label {
+    border: none;
+    color: #9d9d9d;
+}
+
+.social-share .dropdown-label svg {
+    width: 14px;
+    color: #9d9d9d;
+    margin-left: 8px;
+}
+
+.social-share ul li button svg {
+    width: 18px;
+    margin-left: 8px;
+}
+
+.social-share ul li button {
+    color: #9d9d9d;
+    font-size: 14px;
+}
+
+.social-share ul li button:hover {
+    color: #ff742b;
+}
