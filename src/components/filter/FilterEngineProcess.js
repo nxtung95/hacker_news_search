@@ -9,21 +9,22 @@ export default class FilterEngineProcess extends React.Component {
             expanded: false,
             ariaSelected: false,
         }
+        this.pulldown = React.createRef();
     }
 
-    // componentDidMount() {
-    //     document.addEventListener('mousedown', this.handleClickOutside);
-    // }
+    componentDidUpdate() {
+        if (this.state.expanded) {
+            document.addEventListener('click', this.handleClickOutside);
+        } else {
+            document.removeEventListener('click',this.handleClickOutside);
+        }
+    }
 
-    // componentWillUnmount() {
-    //     document.removeEventListener('mousedown', this.handleClickOutside);
-    // }
-
-    // handleClickOutside = event => {
-    //     if (this.pulldown && !this.pulldown.contains(event.target)) {
-    //         this.expandedPullDown();
-    //     }
-    // }
+    handleClickOutside = event => {
+        if (this.pulldown && !this.pulldown.current.contains(event.target)) {
+            this.expandedPullDown();
+        }
+    }
 
     expandedPullDown = () => {
         this.setState(prevState => ({
@@ -42,7 +43,7 @@ export default class FilterEngineProcess extends React.Component {
                         role="combobox"
                         aria-expanded={this.state.expanded}
                         onClick={this.expandedPullDown}
-                        ref={node => { this.pulldown = node; }}
+                        ref={this.pulldown}
                     >
                         <label className="dropdown-label">
                             <svg xmlns="http://www.w3.org/2000/svg"

@@ -17,29 +17,20 @@ export default class FilterBy extends React.Component {
 
     componentDidUpdate() {
         if (this.state.expanded) {
-            console.log('component did update expande true');
-            document.addEventListener(
-                'click',
-                this.handleClickOutsideOfComponent,
-            );
+            document.addEventListener('click',this.handleClickOutsideOfComponent);
         } else {
-            document.removeEventListener(
-                'click',
-                this.handleClickOutsideOfComponent,
-            );
+            document.removeEventListener('click',this.handleClickOutsideOfComponent);
         }
     }
 
     handleClickOutsideOfComponent = e => {
-        console.log('click out side');
         if (this.filter.current && this.filter.current.contains(e.target)) {
             return;
         }
-        this.setState({ expanded: false }, () => { console.log(this.state.search)});
+        this.setState({ expanded: false });
     };
 
     expandedPullDown = () => {
-        console.log('expande pull down');
         this.setState(prevState => ({
             expanded: !prevState.expanded
         }));

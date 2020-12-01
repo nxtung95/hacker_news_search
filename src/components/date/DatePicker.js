@@ -17,6 +17,7 @@ export default class DatePicker extends React.Component {
                 }
             ],
         }
+        this.wrapperRef = React.createRef();
     }
 
     componentDidMount() {
@@ -28,14 +29,14 @@ export default class DatePicker extends React.Component {
     }
 
     handleClickOutside = event => {
-        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+        if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
             this.props.callback();
         }
     }
 
     render() {
         return (
-            <div className="date-picker" ref={node => { this.wrapperRef = node; }}>
+            <div className="date-picker" ref={this.wrapperRef}>
                 <DateRange
                     editableDateInputs={true}
                     onChange={item => this.setState({ init: [item.selection] })}
@@ -46,27 +47,3 @@ export default class DatePicker extends React.Component {
         );
     }
 }
-
-
-// const DatePicker = () => {
-//     const [state, setState] = useState([
-//         {
-//             startDate: new Date(),
-//             endDate: new Date(),
-//             key: 'selection'
-//         }
-//     ]);
-//     console.log(state);
-//     return (
-//         <div className="date-picker">
-//             <DateRange
-//                 editableDateInputs={true}
-//                 onChange={item => setState([item.selection])}
-//                 moveRangeOnFirstSelection={false}
-//                 ranges={state}
-//             />
-//         </div>
-//     );
-// }
-
-// export default DatePicker;
