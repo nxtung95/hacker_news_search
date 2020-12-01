@@ -11,24 +11,35 @@ export default class FilterBy extends React.Component {
             search: this.props.defaultValue,
             datepicker: false,
         };
+
+        this.filter = React.createRef();
     }
 
-    componentDidMount() {
-        document.addEventListener('mousedown', this.handleClickOutside);
+    componentDidUpdate() {
+        if (this.state.expanded) {
+            console.log('component did update expande true');
+            document.addEventListener(
+                'click',
+                this.handleClickOutsideOfComponent,
+            );
+        } else {
+            document.removeEventListener(
+                'click',
+                this.handleClickOutsideOfComponent,
+            );
+        }
     }
 
-    componentWillUnmount() {
-        document.removeEventListener('mousedown', this.handleClickOutside);
-    }
-
-    // handleClickOutside = event => {
-    //     console.log(event.target);
-    //     if (this.pulldown && !this.pulldown.contains(event.target)) {
-    //         this.expandedPullDown();
-    //     }
-    // }
+    handleClickOutsideOfComponent = e => {
+        console.log('click out side');
+        if (this.filter.current && this.filter.current.contains(e.target)) {
+            return;
+        }
+        this.setState({ expanded: false }, () => { console.log(this.state.search)});
+    };
 
     expandedPullDown = () => {
+        console.log('expande pull down');
         this.setState(prevState => ({
             expanded: !prevState.expanded
         }));
@@ -56,7 +67,7 @@ export default class FilterBy extends React.Component {
                     aria-expanded={this.state.expanded}
                     aria-controls="group"
                     onClick={this.expandedPullDown}
-                    ref={node => { this.pulldown = node; }}
+                    ref={this.filter}
                 >
                     <label className="dropdown-label">
                         {this.state.search}

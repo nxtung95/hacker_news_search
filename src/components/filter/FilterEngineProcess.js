@@ -11,19 +11,19 @@ export default class FilterEngineProcess extends React.Component {
         }
     }
 
-    componentDidMount() {
-        document.addEventListener('mousedown', this.handleClickOutside);
-    }
+    // componentDidMount() {
+    //     document.addEventListener('mousedown', this.handleClickOutside);
+    // }
 
-    componentWillUnmount() {
-        document.removeEventListener('mousedown', this.handleClickOutside);
-    }
+    // componentWillUnmount() {
+    //     document.removeEventListener('mousedown', this.handleClickOutside);
+    // }
 
-    handleClickOutside = event => {
-        if (this.pulldown && !this.pulldown.contains(event.target)) {
-            this.expandedPullDown();
-        }
-    }
+    // handleClickOutside = event => {
+    //     if (this.pulldown && !this.pulldown.contains(event.target)) {
+    //         this.expandedPullDown();
+    //     }
+    // }
 
     expandedPullDown = () => {
         this.setState(prevState => ({

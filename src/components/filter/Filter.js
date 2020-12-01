@@ -8,6 +8,7 @@ const filter = () => {
     const filterStory = ['All', 'Stories', 'Comment'];
     const filterPopularity = ['Popularity', 'Date'];
     const filterDate = ['All time', 'Last 24h', 'Past Week', 'Past Month', 'Past Year', 'Custom range'];
+
     return (
         <div className="filter">
             <div className="filter-condition">
