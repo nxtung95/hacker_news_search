@@ -1,9 +1,9 @@
-.setting i {
+.setting-icon i {
     font-size: 24px;
     margin: 0 8px;
 }
 
-.setting span {
+.setting-icon span {
     font-size: 18px;
     color: #000;
 }

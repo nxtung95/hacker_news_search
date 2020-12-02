@@ -4,7 +4,7 @@ import LogoName from '../logo/LogoName';
 import SearchIcon from '../search/SearchIcon';
 import SearchInput from '../search/SearchInput';
 import SearchPower from '../search/SearchPower';
-import Setting from '../setting/Setting';
+import SettingIcon from '../setting/SettingIcon';
 import '../.././assets/css/header/Header.css';
 
 const header = () => {
@@ -20,8 +20,8 @@ const header = () => {
                     <SearchInput />
                     <SearchPower />
                 </div>
-                <a className="setting" href="/settings">
-                    <Setting />
+                <a className="setting-icon" href="/settings">
+                    <SettingIcon />
                 </a>
             </div>
         </header>

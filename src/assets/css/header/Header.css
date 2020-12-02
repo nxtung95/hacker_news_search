@@ -26,7 +26,7 @@
     margin-right: 30px;
 }
 
-.header .setting {
+.header .setting-icon {
     display: flex;
     justify-content: flex-end;
     align-items: center;

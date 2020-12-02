@@ -7,16 +7,17 @@ export default class FilterEngineProcess extends React.Component {
 
         this.state = {
             expanded: false,
-            ariaSelected: false,
+            selected: false,
         }
         this.pulldown = React.createRef();
+        this.element = React.createRef();
     }
 
     componentDidUpdate() {
         if (this.state.expanded) {
             document.addEventListener('click', this.handleClickOutside);
         } else {
-            document.removeEventListener('click',this.handleClickOutside);
+            document.removeEventListener('click', this.handleClickOutside);
         }
     }
 
@@ -42,6 +43,7 @@ export default class FilterEngineProcess extends React.Component {
                     <div className="dropdown"
                         role="combobox"
                         aria-expanded={this.state.expanded}
+                        aria-controls="group"
                         onClick={this.expandedPullDown}
                         ref={this.pulldown}
                     >
@@ -70,7 +72,7 @@ export default class FilterEngineProcess extends React.Component {
                             this.state.expanded &&
                             (
                                 <React.Fragment>
-                                    <li role="option" aria-selected={this.state.ariaSelected}>
+                                    <li role="option" aria-selected={this.state.selected} ref={this.element}>
                                         <button>
                                             Share on Twitter
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -86,9 +88,9 @@ export default class FilterEngineProcess extends React.Component {
                                             </svg>
                                         </button>
                                     </li>
-                                    <li role="option" aria-selected={this.state.ariaSelected}>
+                                    <li role="option" aria-selected={this.state.selected} ref={this.element}>
                                         <button>
-                                            Share on facebook
+                                            Share on Facebook
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -102,7 +104,7 @@ export default class FilterEngineProcess extends React.Component {
                                             </svg>
                                         </button>
                                     </li>
-                                    <li role="option" aria-selected={this.state.ariaSelected}>
+                                    <li role="option" aria-selected={this.state.selected} ref={this.element}>
                                         <button>
                                             Share via Email
                                             <svg xmlns="http://www.w3.org/2000/svg"
