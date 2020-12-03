@@ -10,7 +10,6 @@ export default class FilterEngineProcess extends React.Component {
             selected: false,
         }
         this.pulldown = React.createRef();
-        this.element = React.createRef();
     }
 
     componentDidUpdate() {
@@ -72,7 +71,7 @@ export default class FilterEngineProcess extends React.Component {
                             this.state.expanded &&
                             (
                                 <React.Fragment>
-                                    <li role="option" aria-selected={this.state.selected} ref={this.element}>
+                                    <li role="option" aria-selected={this.state.selected}>
                                         <button>
                                             Share on Twitter
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +87,7 @@ export default class FilterEngineProcess extends React.Component {
                                             </svg>
                                         </button>
                                     </li>
-                                    <li role="option" aria-selected={this.state.selected} ref={this.element}>
+                                    <li role="option" aria-selected={this.state.selected}>
                                         <button>
                                             Share on Facebook
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +103,7 @@ export default class FilterEngineProcess extends React.Component {
                                             </svg>
                                         </button>
                                     </li>
-                                    <li role="option" aria-selected={this.state.selected} ref={this.element}>
+                                    <li role="option" aria-selected={this.state.selected}>
                                         <button>
                                             Share via Email
                                             <svg xmlns="http://www.w3.org/2000/svg"

@@ -9,7 +9,7 @@ export default class HackerNewsSearch extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Header />
+                <Header visibleSearchBar={true} url="/settings" icon="fa fa-gear" textIcon="Settings"/>
                 <Filter />
                 <SearchResult />
                 <Pagination />

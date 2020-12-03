@@ -1,8 +1,9 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const setting = () => {
     return (
-        <div>abc</div>
+        <Header visibleSearchBar={false} url="/" icon="fa fa-arrow-left" textIcon="Back" />
     );
 }
 

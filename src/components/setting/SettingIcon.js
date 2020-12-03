@@ -1,11 +1,11 @@
 import React from 'react';
 import '../.././assets/css/setting/SettingIcon.css';
 
-const setting = () => {
+const setting = (props) => {
     return (
         <React.Fragment>
-            <i className="fa fa-gear"></i>
-            <span>Settings</span>
+            <i className={props.icon} />
+            <span>{props.textIcon}</span>
         </React.Fragment>
     );
 }
