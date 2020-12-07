@@ -1,0 +1,24 @@
+.settings {
+    font-size: 14px;
+    background-color: #f6f6ef;
+}
+
+.settings .settings-fieldset {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0;
+    flex-direction: column;
+}
+
+.settings fieldset {
+    padding: .35em .75em .625em;
+}
+
+.settings-fieldset h2 {
+    color: #5c5c5c;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 24px;
+}

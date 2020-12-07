@@ -10,6 +10,7 @@ export default class FilterBy extends React.Component {
             expanded: false,
             search: this.props.defaultValue,
             datepicker: false,
+            selected: false,
         };
 
         this.filter = React.createRef();
@@ -21,6 +22,19 @@ export default class FilterBy extends React.Component {
         } else {
             document.removeEventListener('click',this.handleClickOutsideOfComponent);
         }
+    }
+
+    handleChangeSelected = e => {
+        if (this.element.current && this.element.current.contains(e.target)) {
+            return;
+        }
+        this.setState({ selected: false });
+    }
+
+    changeSelected = () => {
+        this.setState(prevState => ({
+            selected: !prevState.selected,
+        }));
     }
 
     handleClickOutsideOfComponent = e => {
@@ -87,7 +101,11 @@ export default class FilterBy extends React.Component {
                                     {
                                         this.props.filter.map((val, i) => {
                                             return (
-                                                <li role="option" aria-selected="false" key={i} onClick={() => this.changeValue(val)}>
+                                                <li role="option" 
+                                                aria-selected={this.state.selected} 
+                                                key={i} 
+                                                onClick={() => this.changeValue(val)}
+                                                onMouseEnter={this.changeSelected}>
                                                     <button>{val}</button>
                                                 </li>
                                             );

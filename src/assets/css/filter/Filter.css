@@ -100,3 +100,8 @@
     background-color: #fff;
     color: #5c5c5c;
 }
+
+.filter .filter-settings {
+    font-size: 12px;
+    margin: 0;
+}
