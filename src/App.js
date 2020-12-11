@@ -13,19 +13,15 @@ import {
 
 function App() {
   return (
-    <div className="default light">
-      <div className="container">
-        <ErrorBoundary>
-          <Router>
-            <Switch>
-              <Route exact path="/settings" component={Setting} />
-              <Route exact path="/about" component={About}/>
-              <Route exact path="/" component={HackerNewsSearch} />
-            </Switch>
-          </Router>
-        </ErrorBoundary>
-      </div>
-    </div>
+    <ErrorBoundary>
+      <Router>
+        <Switch>
+          <Route exact path="/settings" component={Setting} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/" component={HackerNewsSearch} />
+        </Switch>
+      </Router>
+    </ErrorBoundary>
   );
 }
 

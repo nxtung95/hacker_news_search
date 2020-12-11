@@ -11,18 +11,21 @@ const Setting = () => {
     const optionPopularType = ['Most popular fist', 'Most recent first'];
     const optionDateRange = ['Last 24h', 'Last week', 'Last month', 'Last year', 'Forever'];
     const [visible, visibleStyle] = useState(false);
-    console.log('abc');
+    const evenSubmit = event => {
+        alert('abc');
+        console.log(event);
+    }
     return (
         <React.Fragment>
             <Header visibleSearchBar={false} url="/" icon="fa fa-arrow-left" textIcon="Back" />
             <Filter isFilter={false} titleFilter="Settings" />
             <section className="settings">
-                <form>
+                <form onSubmit={(event) => {evenSubmit(event)}}>
                     <fieldset className="settings-fieldset">
                         <h2>Display options</h2>
                         {
                             visible && (
-                                <SettingRow labelSettingRow="Show thumbnails" type="checkbox" />
+                                <SettingRow labelSettingRow="Show thumbnails" type="checkbox" defaultValue={false} />
                             )
                         }
                         <SettingRow labelSettingRow="Style" listOption={optionStyle} defaultValue="Default" type="pulldown" callback={visibleStyle} />
@@ -46,7 +49,7 @@ const Setting = () => {
                         )
                     }
                     <div className="setting-apply">
-                        <button disabled>Apply</button>
+                        <button type="submit">Apply</button>
                     </div>
                 </form>
             </section>
