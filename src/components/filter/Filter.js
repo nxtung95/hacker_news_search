@@ -25,7 +25,7 @@ const filter = (props) => {
                     </React.Fragment>
                 ) : 
                 (
-                    <p className="filter-settings">Settings</p>
+                    <p className="filter-settings">{props.titleFilter}</p>
                 )
             }
         </div>

@@ -1,0 +1,27 @@
+.layout-about {
+    padding: 24px;
+    background-color: #f6f6ef;
+    min-height: calc(100vh - 98px);
+    color: #5c5c5c;
+    font-size: 14px;
+}
+
+.layout-about p {
+    color: #5c5c5c;
+    margin-bottom: 8px;
+}
+
+.layout-about h3 {
+    color: #000;
+    font-size: 20px;
+    margin: 16px 0 4px;
+}
+
+.layout-about ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.layout-about li {
+    margin-bottom: 8px;
+}

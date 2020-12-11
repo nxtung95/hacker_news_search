@@ -22,3 +22,49 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 24px;
 }
+
+.settings .setting-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.setting-row label {
+    width: 50%;
+    margin-right: 24px;
+    text-align: right;
+    color: #5c5c5c;
+}
+.setting-row .setting-input {
+    width: 50%;
+}
+
+.setting-input select {
+    color: #5c5c5c;
+    max-width: 100%;
+}
+
+.settings .setting-apply {
+    padding: 0 24px 24px;
+    text-align: right;
+}
+
+/* .setting-apply button:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+} */
+
+.setting-apply button {
+    padding: 8px 16px;
+    border: 0 solid #ccc;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #ff742b;
+}
+
+.settings #login {
+    width: 240px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    border: 1px solid #a6a6a6;
+}

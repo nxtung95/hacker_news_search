@@ -10,7 +10,7 @@ const footer = () => {
                 </li>
                 <li>•</li>
                 <li>
-                    <a href="/setting">Setting</a>
+                    <a href="/settings">Setting</a>
                 </li>
                 <li>•</li>
                 <li>
