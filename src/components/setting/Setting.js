@@ -4,23 +4,25 @@ import Filter from '../filter/Filter';
 import Footer from '../footer/Footer';
 import '../.././assets/css/setting/Setting.css';
 
-const Setting = () => {
+const Setting = (props) => {
+    console.log('Setting');
     const optionStyle = ["Default", "Experimental"];
     const optionHitPerPage = [10, 20, 30, 50];
     const optionType = ['All', 'Stories', 'Comments'];
     const optionPopularType = ['Most popular fist', 'Most recent first'];
     const optionDateRange = ['Last 24h', 'Last week', 'Last month', 'Last year', 'Forever'];
     const [visible, visibleStyle] = useState(false);
-    const evenSubmit = event => {
-        alert('abc');
-        console.log(event);
+
+    const changeUI = () => {
+        props.changeDefaultLight();
+        props.changeVisibleSidebar();
     }
     return (
         <React.Fragment>
             <Header visibleSearchBar={false} url="/" icon="fa fa-arrow-left" textIcon="Back" />
             <Filter isFilter={false} titleFilter="Settings" />
             <section className="settings">
-                <form onSubmit={(event) => {evenSubmit(event)}}>
+                <form>
                     <fieldset className="settings-fieldset">
                         <h2>Display options</h2>
                         {
@@ -49,7 +51,7 @@ const Setting = () => {
                         )
                     }
                     <div className="setting-apply">
-                        <button type="submit">Apply</button>
+                        <button onClick={changeUI} type="button">Apply</button>
                     </div>
                 </form>
             </section>

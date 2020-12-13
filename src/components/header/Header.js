@@ -5,16 +5,17 @@ import SearchIcon from '../search/SearchIcon';
 import SearchInput from '../search/SearchInput';
 import SearchPower from '../search/SearchPower';
 import SettingIcon from '../setting/SettingIcon';
+import { Link } from 'react-router-dom';
 import '../.././assets/css/header/Header.css';
 
 const header = (props) => {
     return (
         <header className="header">
             <div className="header-search">
-                <a className="header-logo" href="/">
+                <Link to="/" className="header-logo">
                     <Logo />
                     <LogoName />
-                </a>
+                </Link>
                 {
                     props.visibleSearchBar && (
                         <div className="search-bar">
@@ -24,9 +25,9 @@ const header = (props) => {
                         </div>
                     )
                 }
-                <a className="setting-icon" href={props.url}>
+                <Link to={props.url} className="setting-icon">
                     <SettingIcon icon={props.icon} textIcon={props.textIcon} />
-                </a>
+                </Link>
             </div>
         </header>
     );

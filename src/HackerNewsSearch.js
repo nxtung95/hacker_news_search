@@ -5,18 +5,17 @@ import Filter from './components/filter/Filter';
 import Pagination from './components/pagination/Pagination';
 import Footer from './components/footer/Footer';
 
-export default class HackerNewsSearch extends React.Component {
-    render() {
-        return (
-            <div className="default light">
-                <div className="container">
-                    <Header visibleSearchBar={true} url="/settings" icon="fa fa-gear" textIcon="Settings" />
-                    <Filter isFilter={true} />
-                    <SearchResult />
-                    <Pagination />
-                    <Footer />
-                </div>
+const HackerNewSearch = props => {
+    return (
+        <div className={props.defaultStyle}>
+            <div className="container">
+                <Header visibleSearchBar={true} url="/settings" icon="fa fa-gear" textIcon="Settings" />
+                <Filter isFilter={true} />
+                <SearchResult />
+                <Pagination />
+                <Footer />
             </div>
-        );
-    }
-} 
+        </div>
+    );
+}
+export default HackerNewSearch;

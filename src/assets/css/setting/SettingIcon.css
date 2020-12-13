@@ -1,9 +1,34 @@
-.setting-icon i {
+.header .setting-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.default.light .setting-icon i {
     font-size: 24px;
     margin: 0 8px;
 }
 
-.setting-icon span {
+.experimental.light .setting-icon i {
+    color: #3a416f;
+    width: 14px;
+    margin-right: 8px;
+}
+
+.default.light .setting-icon span {
     font-size: 18px;
     color: #000;
+}
+
+.experimental.light .setting-icon span {
+    font-size: 14px;
+    color: #3a416f;
+}
+
+.experimental.light .setting-icon {
+    font-size: 14px;
+    color: rgba(33,36,61,.8);
+    background-color: rgba(197,201,224,.4);
+    min-width: 96px;
 }

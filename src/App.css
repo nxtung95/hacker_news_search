@@ -2,6 +2,11 @@
   font-family: Verdana;
 }
 
+.experimental .light {
+  background-color: #f5f5fa;
+  color: #3a416f;
+}
+
 body {
   font-family: Verdana,Geneva,sans-serif; 
 }

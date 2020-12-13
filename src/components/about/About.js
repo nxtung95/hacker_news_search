@@ -7,7 +7,7 @@ import '../.././assets/css/about/About.css';
 const about = () => {
     return (
         <React.Fragment>
-            <Header visibleSearchBar={false} url="/" />
+            <Header visibleSearchBar={false} />
             <Filter isFilter={false} titleFilter="About" />
             <section className="layout-about">
                 <p>
