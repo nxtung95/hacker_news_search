@@ -1,8 +1,16 @@
-.filter {
+.default.light .filter {
     display: flex;
     justify-content: space-between;
     padding: 10px 10px;
     background-color: #f6f6ef;
+}
+
+.experimental.light .filter {
+    padding-left: 254px;
+    padding-right: 24px;
+    background-color: #f5f5fa;
+    color: rgba(33,36,61,.5);
+    height: 80px;
 }
 
 .filter .filter-condition {

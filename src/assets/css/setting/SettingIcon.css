@@ -1,8 +1,8 @@
 .header .setting-icon {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    justify-content: center;
+    margin-left: 15px;
 }
 
 .default.light .setting-icon i {

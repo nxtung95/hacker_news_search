@@ -31,11 +31,6 @@
     max-width: 180px;
 }
 
-.experimental.light .header-logo img {
-    width: 60px;
-    height: 60px;
-}
-
 .experimental.light .header-logo .logo-name {
     color: rgba(33,36,61,.5);
 }
@@ -48,11 +43,4 @@
     background-color: white;
     margin-right: 30px;
     margin-left: 15px;
-}
-
-.header .setting-icon {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: 10px;
 }
