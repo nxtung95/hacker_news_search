@@ -9,12 +9,13 @@
 .experimental .search-result .container {
     border-radius: 4px;
     box-shadow: 0 18px 24px rgba(14,16,29,.12);
+    width: 99%;
 }
 
 .experimental .search-result {
     min-height: calc(100vh - 120px);
     background-color: #f5f5fa;
-    padding: 10px 0 0;
+    padding: 178px 0 0;
 }
 
 @media (min-width: 769px) {

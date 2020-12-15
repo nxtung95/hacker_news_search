@@ -8,20 +8,18 @@ import SideBar from './components/sidebar/SideBar';
 
 const HackerNewSearch = props => {
     return (
-        <div className={props.defaultStyle}>
-            <div className="container">
-                <Header visibleSearchBar={true} url="/settings" icon="fa fa-gear" textIcon="Settings" />
-                <Filter isFilter={true} />
-                {
-                    props.visibleSidebar && (
-                        <SideBar />
-                    )
-                }
-                <SearchResult />
-                <Pagination />
-                <Footer />
-            </div>
-        </div>
+        <React.Fragment>
+            <Header visibleSearchBar={true} url="/settings" icon="fa fa-gear" textIcon="Settings" />
+            <Filter isFilter={true} />
+            {
+                props.visibleSidebar && (
+                    <SideBar />
+                )
+            }
+            <SearchResult />
+            <Pagination />
+            <Footer />
+        </React.Fragment>
     );
 }
 export default HackerNewSearch;

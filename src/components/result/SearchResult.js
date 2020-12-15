@@ -12,6 +12,10 @@ const result = () => {
                 <Story />
                 <Story />
                 <Story />
+                <Story />
+                <Story />
+                <Story />
+                <Story />
             </div>
         </section>
     );
