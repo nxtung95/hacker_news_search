@@ -4,6 +4,7 @@
 }
 
 .experimental.light .header {
+    position: fixed;
     z-index: 15;
 }
 .header .header-search {

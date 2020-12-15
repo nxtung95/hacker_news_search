@@ -4,6 +4,17 @@
     min-height: 40px;
 }
 
+.experimental .story {
+    min-height: 88px;
+    padding-left: 18px;
+    padding: 16px;
+    background-color: #fff;
+}
+
+.experimental .story:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
 .story .story-container {
     display: flex;
     align-items: center;

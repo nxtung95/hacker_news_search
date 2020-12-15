@@ -1,0 +1,33 @@
+.sidebar ul:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar ul {
+    width: 80%;
+    padding: 8px 0;
+    margin: 0 0 0 24px;
+}
+
+.experimental.light .sidebar li, .experimental.light .sidebar li a {
+    color: rgba(33,36,61,.5);
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar li a {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px 16px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.sidebar li a svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+}

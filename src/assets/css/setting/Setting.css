@@ -3,6 +3,12 @@
     background-color: #f6f6ef;
 }
 
+.experimental.light .settings {
+    background-color: #fff;
+    padding-top: 35px;
+    padding-left: 254px;
+}
+
 .settings .settings-fieldset {
     display: flex;
     justify-content: center;
@@ -14,6 +20,16 @@
 
 .settings fieldset {
     padding: .35em .75em .625em;
+}
+
+.experimental.light .settings fieldset {
+    background-color: #f5f5fa;
+}
+
+.experimental.light .settings-fieldset {
+    background: #f7f7f7;
+    border: 1px solid #fdfafa;
+    margin: 16px;
 }
 
 .settings-fieldset h2 {
@@ -67,4 +83,9 @@
     border-radius: 4px;
     padding: 4px 8px;
     border: 1px solid #a6a6a6;
+}
+
+.experimental.light .settings h2 {
+    color: #3a416f;
+    border-bottom: 1px solid transparent;
 }

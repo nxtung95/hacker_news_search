@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Header from '../header/Header';
 import Filter from '../filter/Filter';
 import Footer from '../footer/Footer';
+import SideBar from '../sidebar/SideBar';
 import '../.././assets/css/setting/Setting.css';
 
 const Setting = (props) => {
-    console.log('Setting');
     const optionStyle = ["Default", "Experimental"];
     const optionHitPerPage = [10, 20, 30, 50];
     const optionType = ['All', 'Stories', 'Comments'];
@@ -21,6 +21,11 @@ const Setting = (props) => {
         <React.Fragment>
             <Header visibleSearchBar={false} url="/" icon="fa fa-arrow-left" textIcon="Back" />
             <Filter isFilter={false} titleFilter="Settings" />
+            {
+                props.visibleSidebar && (
+                    <SideBar />
+                )
+            }
             <section className="settings">
                 <form>
                     <fieldset className="settings-fieldset">

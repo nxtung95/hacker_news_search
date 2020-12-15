@@ -14,7 +14,6 @@ import {
 function App() {
   const [defaultStyle, changeDefaultLight] = useState(true);
   const [isVisibleSidebar, changeVisibleSidebar] = useState(false);
-  console.log('style: ' + defaultStyle);
   return (
     <div className={defaultStyle ? "default light" : "experimental light"}>
       <div className="container">

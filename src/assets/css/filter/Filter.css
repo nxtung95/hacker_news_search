@@ -1,6 +1,8 @@
-.default.light .filter {
+.filter {
     display: flex;
     justify-content: space-between;
+}
+.default.light .filter {
     padding: 10px 10px;
     background-color: #f6f6ef;
 }
@@ -11,11 +13,16 @@
     background-color: #f5f5fa;
     color: rgba(33,36,61,.5);
     height: 80px;
+    align-items: center;
 }
 
 .filter .filter-condition {
     display: flex;
     justify-content: flex-start;
+}
+
+.experimental.light .filter-condition {
+    padding-left: 8px;
 }
 
 .filter .engine-process {
@@ -34,9 +41,18 @@
     font-size: 13px;
 }
 
+.experimental.light .filter-by span {
+    margin: 0 8px;
+}
+
 .filter-by .dropdown {
     margin-left: 4px;
     position: relative;
+}
+
+.experimental.light .filter-by .dropdown {
+    color: rgba(33,36,61,.8);
+    background-color: rgba(197,201,224,.4);
 }
 
 .dropdown .dropdown-label {
@@ -55,6 +71,10 @@
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.experimental.light .filter-by .dropdown-label {
+    border: none;
 }
 
 .dropdown-label svg {

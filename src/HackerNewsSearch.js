@@ -4,6 +4,7 @@ import SearchResult from './components/result/SearchResult';
 import Filter from './components/filter/Filter';
 import Pagination from './components/pagination/Pagination';
 import Footer from './components/footer/Footer';
+import SideBar from './components/sidebar/SideBar';
 
 const HackerNewSearch = props => {
     return (
@@ -11,6 +12,11 @@ const HackerNewSearch = props => {
             <div className="container">
                 <Header visibleSearchBar={true} url="/settings" icon="fa fa-gear" textIcon="Settings" />
                 <Filter isFilter={true} />
+                {
+                    props.visibleSidebar && (
+                        <SideBar />
+                    )
+                }
                 <SearchResult />
                 <Pagination />
                 <Footer />

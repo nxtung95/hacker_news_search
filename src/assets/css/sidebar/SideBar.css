@@ -1,0 +1,13 @@
+.experimental.light .sidebar {
+    background-color: #f5f5fa;
+}
+
+.sidebar {
+    position: fixed;
+    top: 95px;
+    height: 100%;
+    padding-top: 35px;
+    z-index: 10;
+    overflow: auto;
+    width: 220px;
+}

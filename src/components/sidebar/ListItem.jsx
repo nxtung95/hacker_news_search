@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'react-router-dom';
-
+import '../.././assets/css/sidebar/ListItem.css';
+import { Link } from "react-router-dom";
 const ListItem = () => {
     return (
         <ul>
@@ -20,7 +20,7 @@ const ListItem = () => {
                         <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
                     All
-                </Link>
+                    </Link>
             </li>
             <li>
                 <Link to="/hot">
@@ -37,7 +37,7 @@ const ListItem = () => {
                         <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
                         <polyline points="17 6 23 6 23 12"></polyline>
                     </svg>Hot
-                </Link>
+                    </Link>
             </li>
             <li>
                 <Link to="/show-hn">
@@ -53,7 +53,7 @@ const ListItem = () => {
                         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                         <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
                     </svg>Show HN
-                </Link>
+                    </Link>
             </li>
             <li>
                 <Link to="/ask-hn">
@@ -69,7 +69,7 @@ const ListItem = () => {
                         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                     </svg>
                     Ask HN
-                </Link>
+                    </Link>
             </li>
             <li>
                 <Link to="/polls">
@@ -87,7 +87,7 @@ const ListItem = () => {
                         <line x1="12" y1="17" x2="12" y2="17"></line>
                     </svg>
                     Polls
-                </Link>
+                    </Link>
             </li>
             <li>
                 <Link to="/jobs">
@@ -103,7 +103,7 @@ const ListItem = () => {
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
                     </svg>Jobs
-                </Link>
+                    </Link>
             </li>
         </ul>
     );
