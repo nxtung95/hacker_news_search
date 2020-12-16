@@ -4,3 +4,7 @@
     color: #ff742b;
     pointer-events: none;
 }
+
+.experimental.light .search-icon {
+    color: rgba(33,36,61,.8);
+}

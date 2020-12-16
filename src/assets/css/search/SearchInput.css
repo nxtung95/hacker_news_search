@@ -9,6 +9,10 @@
     border-radius: 0;
 }
 
+.experimental.light .search-input {
+    background-color: rgba(197,201,224,-0.6);
+}
+
 .search-input:focus {
     outline: none;
 }
