@@ -13,7 +13,10 @@ const HackerNewSearch = props => {
             <Filter isFilter={true} />
             {
                 props.visibleSidebar && (
-                    <SideBar />
+                    <SideBar 
+                        isThemeLight={props.isThemeLight}
+                        changeThemeLight={props.changeThemeLight}
+                    />
                 )
             }
             <SearchResult />

@@ -3,14 +3,16 @@ import Header from '../header/Header';
 import Filter from '../filter/Filter';
 import Footer from '../footer/Footer';
 import SideBar from '../sidebar/SideBar';
+import {
+    OPTION_STYLE, 
+    OPTION_HIT_PER_PAGE, 
+    OPTION_TYPE, 
+    OPTION_POPULAR_TYPE, 
+    OPTION_DATE_RANGE
+} from '../.././utils/Const';
 import '../.././assets/css/setting/Setting.css';
 
 const Setting = (props) => {
-    const optionStyle = ["Default", "Experimental"];
-    const optionHitPerPage = [10, 20, 30, 50];
-    const optionType = ['All', 'Stories', 'Comments'];
-    const optionPopularType = ['Most popular fist', 'Most recent first'];
-    const optionDateRange = ['Last 24h', 'Last week', 'Last month', 'Last year', 'Forever'];
     const [visible, visibleStyle] = useState(false);
 
     const changeUI = () => {
@@ -23,7 +25,10 @@ const Setting = (props) => {
             <Filter isFilter={false} titleFilter="Settings" />
             {
                 props.visibleSidebar && (
-                    <SideBar />
+                    <SideBar
+                        isThemeLight={props.isThemeLight}
+                        changeThemeLight={props.changeThemeLight}
+                     />
                 )
             }
             <section className="settings">
@@ -32,26 +37,26 @@ const Setting = (props) => {
                         <h2>Display options</h2>
                         {
                             visible && (
-                                <SettingRow labelSettingRow="Show thumbnails" type="checkbox" defaultValue={false} />
+                                <SettingRow labelSettingRow="Show thumbnails" type="checkbox" defaultValue={props.value} setValue={value => props.setValue(value)}/>
                             )
                         }
-                        <SettingRow labelSettingRow="Style" listOption={optionStyle} defaultValue="Default" type="pulldown" callback={visibleStyle} />
-                        <SettingRow labelSettingRow="Hits per page" listOption={optionHitPerPage} defaultValue={optionHitPerPage[2]} type="pulldown" />
+                        <SettingRow labelSettingRow="Style" listOption={OPTION_STYLE} defaultValue={props.value} type="pulldown" callback={visibleStyle} setValue={value => props.setValue(value)} />
+                        <SettingRow labelSettingRow="Hits per page" listOption={OPTION_HIT_PER_PAGE} defaultValue={props.value} type="pulldown" setValue={value => props.setValue(value)} />
                     </fieldset>
                     <fieldset className="settings-fieldset">
                         <h2>Ranking options</h2>
-                        <SettingRow labelSettingRow="Default type" listOption={optionType} defaultValue={optionType[1]} type="pulldown" />
-                        <SettingRow labelSettingRow="Default type" listOption={optionPopularType} defaultValue={optionPopularType[0]} type="pulldown" />
-                        <SettingRow labelSettingRow="Default date range" listOption={optionDateRange} defaultValue={optionDateRange[4]} type="pulldown" />
-                        <SettingRow labelSettingRow="Use the story text for search" type="checkbox" defaultValue={true} />
-                        <SettingRow labelSettingRow="Use the author's username for search" type="checkbox" defaultValue={true} />
-                        <SettingRow labelSettingRow="Typo-tolerance" type="checkbox" defaultValue={true} />
+                        <SettingRow labelSettingRow="Default type" listOption={OPTION_TYPE} defaultValue={props.value} type="pulldown" setValue={value => props.setValue(value)} />
+                        <SettingRow labelSettingRow="Default type" listOption={OPTION_POPULAR_TYPE} defaultValue={props.value} type="pulldown" setValue={value => props.setValue(value)} />
+                        <SettingRow labelSettingRow="Default date range" listOption={OPTION_DATE_RANGE} defaultValue={props.value} type="pulldown" setValue={value => props.setValue(value)} />
+                        <SettingRow labelSettingRow="Use the story text for search" type="checkbox" defaultValue={props.value} setValue={value => props.setValue(value)} />
+                        <SettingRow labelSettingRow="Use the author's username for search" type="checkbox" defaultValue={props.value} setValue={value => props.setValue(value)} />
+                        <SettingRow labelSettingRow="Typo-tolerance" type="checkbox" defaultValue={props.value} setValue={value => props.setValue(value)} />
                     </fieldset>
                     {
                         visible && (
                             <fieldset className="settings-fieldset">
                                 <h2>Your options</h2>
-                                <SettingRow labelSettingRow="Your HN login" type="input" defaultValue="" />
+                                <SettingRow labelSettingRow="Your HN login" type="input" defaultValue={props.value} setValue={value => props.setValue(value)} />
                             </fieldset>
                         )
                     }
@@ -67,8 +72,6 @@ const Setting = (props) => {
 
 
 const SettingRow = (props) => {
-    const [value, setValue] = useState(props.defaultValue);
-
     const handleInput = (event) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -77,16 +80,16 @@ const SettingRow = (props) => {
         } else if (value === 'Default') {
             props.callback(false);
         }
-        setValue(value);
+        props.setValue(value);
     }
 
     let element;
     if (props.type === "pulldown") {
-        element = <PullDown listOption={props.listOption} callback={handleInput} default={value} />
+        element = <PullDown listOption={props.listOption} callback={handleInput} default={props.defaultValue} />
     } else if (props.type === "checkbox") {
-        element = <CheckBox type={props.type} callback={handleInput} default={value} />
+        element = <CheckBox type={props.type} callback={handleInput} default={props.defaultValue} />
     } else if (props.type === "input") {
-        element = <Input type={props.type} default={value} callback={handleInput} />
+        element = <Input type={props.type} default={props.defaultValue} callback={handleInput} />
     }
 
     return (
