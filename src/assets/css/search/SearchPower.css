@@ -1,11 +1,12 @@
 .search-power {
     color: rgba(33,36,61,.5);
-    font-size: 15px;
+    font-size: 12px;
     white-space: nowrap;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     user-select: none;
+    margin-right: 20px;
 }
 
 .search-power span {
