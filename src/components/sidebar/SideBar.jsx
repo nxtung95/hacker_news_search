@@ -5,7 +5,6 @@ import Theme from './Theme';
 import '../.././assets/css/sidebar/SideBar.css';
 
 const SideBar = props => {
-    console.log(props);
     return (
         <aside className="sidebar">
             <ListItem />

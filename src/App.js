@@ -15,7 +15,6 @@ function App() {
   const [defaultStyle, changeDefaultLight] = useState(true);
   const [isVisibleSidebar, changeVisibleSidebar] = useState(false);
   const [isThemeLight, changeThemeLight] = useState(true);
-  const [valueSetting, setValueSetting] = useState
   const theme = () => {
     let theme;
     if (defaultStyle) {
@@ -41,7 +40,6 @@ function App() {
                     isThemeLight={isThemeLight}
                     changeThemeLight={changeThemeLight}
                     changeVisibleSidebar={() => changeVisibleSidebar(!isVisibleSidebar)}
-                    setValue={value => setValue(value)}
                     {...props}
                   />)
               }
