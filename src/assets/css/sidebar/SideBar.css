@@ -2,6 +2,10 @@
     background-color: #f5f5fa;
 }
 
+.experimental.dark .sidebar {
+    background-color: #22222b;
+}
+
 .sidebar {
     position: fixed;
     top: 95px;

@@ -13,6 +13,11 @@
     background-color: rgba(197,201,224,-0.6);
 }
 
+.experimental.dark .search-input {
+    color: #fff;
+    background-color: #32323f;
+}
+
 .search-input:focus {
     outline: none;
 }

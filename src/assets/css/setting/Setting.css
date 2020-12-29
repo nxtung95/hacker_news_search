@@ -3,11 +3,19 @@
     background-color: #f6f6ef;
 }
 
-.experimental.light .settings {
-    background-color: #fff;
+.experimental .settings {
     padding-top: 208px;
     padding-left: 254px;
 }
+
+.experimental.light .settings {
+    background-color: #fff;
+}
+
+.experimental.dark .settings {
+    background-color: #22222b;
+}
+
 
 .settings .settings-fieldset {
     display: flex;
@@ -16,6 +24,12 @@
     border: none;
     margin-bottom: 0;
     flex-direction: column;
+    margin:16px;
+}
+
+.experimental.dark .settings .settings-fieldset {
+    border: none;
+    background-color: #32323f;
 }
 
 .settings fieldset {
@@ -39,6 +53,14 @@
     margin-bottom: 24px;
 }
 
+.experimental .settings-fieldset h2 {
+    border-bottom: 1px solid transparent;
+}
+
+.experimental.dark .settings-fieldset h2 {
+    color: hsla(0,0%,100%,.85);
+}
+
 .settings .setting-row {
     display: flex;
     justify-content: center;
@@ -51,6 +73,11 @@
     text-align: right;
     color: #5c5c5c;
 }
+
+.experimental.dark .setting-row label {
+    color: hsla(0,0%,100%,.85);
+}
+
 .setting-row .setting-input {
     width: 50%;
 }
@@ -76,6 +103,16 @@
     border-radius: 4px;
     color: #fff;
     background-color: #ff742b;
+}
+
+.experimental.light .setting-apply button {
+    color: #3a416f;
+    background-color: rgba(197,201,224,.4);
+}
+
+.experimental.dark .setting-apply button {
+    color: hsla(0,0%,100%,.42);
+    background-color: rgba(197,201,224,.4);
 }
 
 .settings #login {

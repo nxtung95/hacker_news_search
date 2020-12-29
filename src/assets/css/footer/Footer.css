@@ -18,3 +18,7 @@
 .footer-list a {
     color: #000;
 }
+
+.experimental.dark .footer-list a {
+    color: #9d9d9d;
+}

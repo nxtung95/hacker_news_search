@@ -10,10 +10,13 @@
     margin: 0 8px;
 }
 
+.experimental .setting-icon i {
+    margin-right: 8px;
+}
+
 .experimental.light .setting-icon i {
     color: #3a416f;
     width: 14px;
-    margin-right: 8px;
 }
 
 .default.light .setting-icon span {
@@ -26,9 +29,17 @@
     color: #3a416f;
 }
 
-.experimental.light .setting-icon {
+.experimental .setting-icon {
     font-size: 14px;
+    min-width: 96px;
+}
+
+.experimental.light .setting-icon {
     color: rgba(33,36,61,.8);
     background-color: rgba(197,201,224,.4);
-    min-width: 96px;
+}
+
+.experimental.dark .setting-icon {
+    color: hsla(0,0%,100%,.85);
+    background-color: rgba(23,23,30,.4);
 }

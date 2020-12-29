@@ -40,3 +40,7 @@
 .social-share ul li button:hover {
     color: #ff742b;
 }
+
+.experimental.dark .result-time {
+    color: hsla(0,0%,100%,.8);
+}

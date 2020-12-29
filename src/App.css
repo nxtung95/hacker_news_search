@@ -10,6 +10,7 @@
 .experimental .dark {
   background-color: #22222b;
   color: hsla(0,0%,100%,.8);
+  height: 100%;
 }
 
 body {

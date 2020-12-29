@@ -11,8 +11,16 @@
     background-color: #fff;
 }
 
+.experimental.dark .story {
+    background-color: #32323f;
+}
+
 .experimental .story:not(:last-child) {
     border-bottom: 1px solid #eee;
+}
+
+.experimental.dark .story:not(:last-child) {
+    border-bottom: 1px solid #22222b;
 }
 
 .story .story-container {

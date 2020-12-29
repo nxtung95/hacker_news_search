@@ -14,7 +14,7 @@
 
 .experimental .search-result {
     min-height: calc(100vh - 120px);
-    background-color: #f5f5fa;
+    background-color: transparent;
     padding: 178px 0 0;
 }
 

@@ -19,10 +19,8 @@ function App() {
     let theme;
     if (defaultStyle) {
       theme = "default light";
-    } else if (isThemeLight) {
-      theme = "experimental light";
     } else {
-      theme = "experimental dark";
+      theme = isThemeLight ? "experimental light" : "experimental dark";
     }
     return theme;
   }
@@ -38,7 +36,7 @@ function App() {
                     changeDefaultLight={() => changeDefaultLight(!defaultStyle)}
                     visibleSidebar={isVisibleSidebar}
                     isThemeLight={isThemeLight}
-                    changeThemeLight={changeThemeLight}
+                    changeThemeLight={() => changeThemeLight(!isThemeLight)}
                     changeVisibleSidebar={() => changeVisibleSidebar(!isVisibleSidebar)}
                     {...props}
                   />)

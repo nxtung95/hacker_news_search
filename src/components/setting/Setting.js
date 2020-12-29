@@ -21,8 +21,8 @@ export default class Setting extends React.Component {
         this.state = { ...setting };
     }
 
-    handleStyle = () => {
-        this.setState({ visibleThumbnails: !this.state.visibleThumbnails });
+    handleStyle = (style) => {
+        this.setState({ visibleThumbnails: style });
     }
 
     setValueForm = (name, value) => {
@@ -32,8 +32,12 @@ export default class Setting extends React.Component {
     }
 
     applySetting = () => {
-        this.props.changeDefaultLight();
-        this.props.changeVisibleSidebar();
+        const prevStyle = LocalStorage.getItemSetting('style');
+        const isFirstApply = _.isNull(prevStyle);
+        if (!_.isEqual(prevStyle, this.state.style) || isFirstApply) {
+            this.props.changeDefaultLight();
+            this.props.changeVisibleSidebar();
+        }
         LocalStorage.saveValueSetting(this.state);
     }
     render() {
@@ -161,10 +165,10 @@ const SettingRow = (props) => {
         const target = event.target;
         const name = target.name;
         const value = target.type === 'checkbox' ? target.checked : target.value;
-        if (value === 'Experimental') {
-            props.callback(true);
-        } else if (value === 'Default') {
+        if (_.isEqual(value, "Default")) {
             props.callback(false);
+        } else if (_.isEqual(value, "Experimental")) {
+            props.callback(true);
         }
         setValueSetting(value);
         props.setValueForm(name, value);

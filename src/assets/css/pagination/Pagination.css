@@ -7,6 +7,10 @@
     margin-top: 0;
 }
 
+.experimental.dark .pagination {
+    background-color: transparent;
+}
+
 .pagination-item button{
     padding: 0;
     min-width: 30px;

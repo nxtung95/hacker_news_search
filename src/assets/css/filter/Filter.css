@@ -7,16 +7,25 @@
     background-color: #f6f6ef;
 }
 
-.experimental.light .filter {
+.experimental .filter {
     padding-left: 254px;
     padding-right: 24px;
-    background-color: #f5f5fa;
     color: rgba(33,36,61,.5);
     height: 80px;
     align-items: center;
     position: fixed;
     top: 100px;
     width: 84%;
+}
+
+.experimental.light .filter {
+    color: rgba(33,36,61,.5);
+    background-color: #f5f5fa;
+}
+
+.experimental.dark .filter {
+    background-color: #22222b;
+    color: hsla(0,0%,100%,.5);
 }
 
 .filter .filter-condition {
@@ -74,6 +83,11 @@
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.experimental.dark .dropdown .dropdown-label {
+    color: hsla(0,0%,100%,.85);
+    background-color: #17171e;
 }
 
 .experimental.light .filter-by .dropdown-label {

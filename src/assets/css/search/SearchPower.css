@@ -12,3 +12,7 @@
 .search-power span {
     pointer-events: none;
 }
+
+.experimental.dark .search-power {
+    color: hsla(0,0%,100%,.4);
+}
