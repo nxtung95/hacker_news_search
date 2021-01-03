@@ -35,9 +35,13 @@ export default class FilterEngineProcess extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="result-time">
-                    22.790.271 results (0.006 seconds)
-                </div>
+                {
+                    this.props.isFilter && (
+                        <div className="result-time">
+                            22.790.271 results (0.006 seconds)
+                        </div>
+                    )
+                }
                 <div className="social-share">
                     <div className="dropdown"
                         role="combobox"

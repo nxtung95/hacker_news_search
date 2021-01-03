@@ -2,12 +2,19 @@ import React from 'react';
 import ListItem from './ListItem';
 import Starred from './Starred';
 import Theme from './Theme';
+import OptionLogin from './OptionLogin';
 import '../.././assets/css/sidebar/SideBar.css';
+import _ from 'lodash';
 
 const SideBar = props => {
     return (
         <aside className="sidebar">
             <ListItem />
+            {
+                !_.isEmpty(props.login) && (
+                    <OptionLogin login={props.login}/>
+                )
+            }
             <Starred />
             <Theme
                 backgroundTheme={props.isThemeLight ? "ThemeSwitch-light" : "ThemeSwitch-dark"}

@@ -6,7 +6,7 @@ const Theme = (props) => {
     const backgroundTheme = `ThemeSwitch ${props.backgroundTheme}`;
     const switchToDarkTheme = () => {
         props.changeThemeLight();
-        LocalStorage.addValueSetting(props.isThemeLight);
+        LocalStorage.addValueSetting("isThemeLight", !props.isThemeLight);
     }
 
     return (

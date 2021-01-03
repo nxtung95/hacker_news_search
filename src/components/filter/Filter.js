@@ -20,7 +20,7 @@ const filter = (props) => {
                             <FilterBy label="for" filter={filterDate} defaultValue="All time" />
                         </div>
                         <div className="engine-process">
-                            <FilterEngineProcess />
+                            <FilterEngineProcess isFilter={true} />
                         </div>
                     </React.Fragment>
                 ) : 

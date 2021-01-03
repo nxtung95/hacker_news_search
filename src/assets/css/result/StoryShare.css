@@ -1,0 +1,80 @@
+.story-container .story-share {
+    display: flex;
+    flex: 1 1;
+    min-width: 140px;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+}
+.experimental.light .story-share button.story-comment:focus:not(:disabled), .experimental .story-share button.story-comment:hover:not(:disabled) {
+    color: #fff!important;
+    background-color: #3a416f!important;
+}
+
+.experimental.light .story-comment:focus:not(:disabled):before, .experimental.light .story-comment:hover:not(:disabled):before {
+    border-right: 6px solid #3a416f!important;
+}
+
+.experimental.light .story-starred:hover:not(:disabled) svg {
+    color: #3a416f!important;
+    fill: #3a416f!important;
+}
+
+.experimental .story-share button.story-comment {
+    background-color: #939393;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px;
+    font-weight: 500;
+    min-width: 25px;
+    position: relative;
+    height: 24px;
+    border-radius: 2px;
+}
+
+.experimental.light .story-comment {
+    color: rgba(33,36,61,.8)!important;
+    background-color: #dbddea!important;
+}
+
+.experimental .story-share button {
+    padding: 0;
+    margin: 0 8px;
+    border: none;
+    color: #9d9d9d;
+    background-color: transparent;
+    outline: none;
+}
+
+.experimental .story-share button.story-comment:before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid #939393;
+    position: absolute;
+    right: 4px;
+    bottom: -6px;
+}
+
+.experimental.light button.story-comment:before {
+    border-right: 6px solid #dbddea!important;
+}
+
+.experimental.light .story-starred {
+    color: #dbddea!important;
+    line-height: 1.5px;
+}
+
+.experimental .story-share button {
+    padding: 0;
+    margin: 0 8px;
+    border: none;
+    color: #9d9d9d;
+    background-color: transparent;
+}
+
+.experimental .story-share svg {
+    width: 18px;
+}

@@ -1,16 +1,26 @@
 import React from 'react';
-import StoryTitle from './StoryTitle';
-import StoryMeta from './StoryMeta';
+import StoryData from './StoryData';
+import StoryImage from './StoryImage';
+import StoryShare from './StoryShare';
 import '../.././assets/css/result/Story.css';
+import LocalStorage from '../.././service/LocalStorage';
 
-const story = () => {
+const story = (props) => {
+    const isShowThumbnails = LocalStorage.getItemSetting("showThumbnails");
     return (
         <article className="story">
             <div className="story-container">
-                <div className="story-data">
-                    <StoryTitle />
-                    <StoryMeta />
-                </div>
+                {
+                    !props.isDefaultStyle && isShowThumbnails && (
+                        <StoryImage />
+                    )
+                }
+                <StoryData />
+                {
+                    !props.isDefaultStyle && (
+                        <StoryShare />
+                    )
+                }
             </div>
         </article>
     );

@@ -4,6 +4,7 @@ import HackerNewsSearch from './HackerNewsSearch';
 import Setting from './components/setting/Setting';
 import About from './components/about/About';
 import ErrorBoundary from './components/error/ErrorBoundary';
+import LocalStorage from './service/LocalStorage';
 
 import {
   BrowserRouter as Router,
@@ -12,18 +13,28 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [defaultStyle, changeDefaultLight] = useState(true);
-  const [isVisibleSidebar, changeVisibleSidebar] = useState(false);
+  const getDefaultVisible = () => {
+    let style = LocalStorage.getItemSetting("style");
+    if (style === "Experimental") {
+      return false;
+    }
+    return true;
+  }
+  const [isDefaultStyle, changeDefaultLight] = useState(() => getDefaultVisible());
+  const [isVisibleSidebar, changeVisibleSidebar] = useState(() => !getDefaultVisible());
   const [isThemeLight, changeThemeLight] = useState(true);
   const theme = () => {
     let theme;
-    if (defaultStyle) {
+    if (isDefaultStyle) {
       theme = "default light";
     } else {
       theme = isThemeLight ? "experimental light" : "experimental dark";
     }
     return theme;
   }
+  const [optionLogin, setOptionLogin] = useState(() => {
+    return LocalStorage.getItemSetting("login");
+  });
   return (
     <div className={theme()}>
       <div className="container">
@@ -33,8 +44,10 @@ function App() {
               <Route exact path="/settings" render={
                 props => (
                   <Setting
-                    changeDefaultLight={() => changeDefaultLight(!defaultStyle)}
+                    changeDefaultLight={() => changeDefaultLight(!isDefaultStyle)}
                     visibleSidebar={isVisibleSidebar}
+                    login={optionLogin}
+                    setOptionLogin={(login) => setOptionLogin(login)}
                     isThemeLight={isThemeLight}
                     changeThemeLight={() => changeThemeLight(!isThemeLight)}
                     changeVisibleSidebar={() => changeVisibleSidebar(!isVisibleSidebar)}
@@ -48,8 +61,10 @@ function App() {
                   <HackerNewsSearch
                     {...props}
                     visibleSidebar={isVisibleSidebar}
+                    login={optionLogin}
                     isThemeLight={isThemeLight}
                     changeThemeLight={() => changeThemeLight(!isThemeLight)}
+                    isDefaultStyle={isDefaultStyle}
                   />
                 )
               } />

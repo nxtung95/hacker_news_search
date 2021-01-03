@@ -16,10 +16,11 @@ const HackerNewSearch = props => {
                     <SideBar 
                         isThemeLight={props.isThemeLight}
                         changeThemeLight={props.changeThemeLight}
+                        login={props.login}
                     />
                 )
             }
-            <SearchResult />
+            <SearchResult isDefaultStyle={props.isDefaultStyle}/>
             <Pagination />
             <Footer />
         </React.Fragment>

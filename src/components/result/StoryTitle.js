@@ -1,7 +1,7 @@
 import React from 'react';
 import '../.././assets/css/result/StoryTitle.css';
 
-const title = () => {
+const StoryTitle = () => {
     return (
         <div className="story-title">
             <a href="https://news.ycombinator.com/item?id=16582136">Stephen Hawking has died</a>
@@ -10,4 +10,4 @@ const title = () => {
     );
 }
 
-export default title;
+export default StoryTitle;

@@ -22,10 +22,10 @@ const getItemSetting = itemName => {
     return item[itemName];
 }
 
-const addValueSetting = (valueName) => {
-    const object = {"isThemeLight" : valueName};
+const addValueSetting = (key, value) => {
+    const object = {[key] : value};
     const itemSetting = JSON.parse(localStorage.getItem("itemSetting"));
-    const newItem = _.assign(object, itemSetting);
+    const newItem = _.assign(itemSetting, object);
     saveValueSetting(newItem);
 }
 

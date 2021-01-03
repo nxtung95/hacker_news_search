@@ -29,3 +29,14 @@
     color: #ff742b;
     border: 1px solid #ff742b;
 }
+
+.experimental.light .pagination-item button {
+    border: none;
+    color: rgba(58,65,111,.4);
+}
+
+.experimental.light .pagination-item.current button {
+    background-color: #fff;
+    color: #3a416f;
+    border: 1px solid rgba(58,65,111,.5);
+}

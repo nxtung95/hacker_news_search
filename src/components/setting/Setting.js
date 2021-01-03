@@ -17,8 +17,28 @@ import '../.././assets/css/setting/Setting.css';
 export default class Setting extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            authorText: false,
+            defaultDateRange: "Last week",
+            defaultSort: "Most recent first",
+            defaultType: "Stories",
+            hitsPerPage: 30,
+            login: "",
+            showThumbnails: true,
+            storyText: false,
+            style: "Default",
+            typoTolerance: false,
+            visibleThumbnails: false,
+        }
+    }
+
+    componentDidMount() {
         const setting = LocalStorage.getObjectSetting();
-        this.state = { ...setting };
+        if (!_.isNull(setting)) {
+            this.setState({
+                ...setting,
+            });
+        }
     }
 
     handleStyle = (style) => {
@@ -34,13 +54,15 @@ export default class Setting extends React.Component {
     applySetting = () => {
         const prevStyle = LocalStorage.getItemSetting('style');
         const isFirstApply = _.isNull(prevStyle);
-        if (!_.isEqual(prevStyle, this.state.style) || isFirstApply) {
+        if (!_.isEqual(prevStyle, this.state.style) && !isFirstApply) {
             this.props.changeDefaultLight();
             this.props.changeVisibleSidebar();
         }
+        this.props.setOptionLogin(this.state.login);
         LocalStorage.saveValueSetting(this.state);
     }
     render() {
+        console.log("Hit per page " + this.state.hitsPerPage);
         return (
             <React.Fragment>
                 <Header visibleSearchBar={false} url="/" icon="fa fa-arrow-left" textIcon="Back" />
@@ -50,6 +72,7 @@ export default class Setting extends React.Component {
                         <SideBar
                             isThemeLight={this.props.isThemeLight}
                             changeThemeLight={this.props.changeThemeLight}
+                            login={this.props.login}
                         />
                     )
                 }
