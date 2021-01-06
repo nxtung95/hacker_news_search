@@ -14,3 +14,32 @@
     margin: 0 5px;
     color: #696969;
 }
+
+.experimental.light .story-meta a {
+    color: rgba(33,36,61,.5);
+}
+
+.experimental .story-meta a {
+    color: #9d9d9d;
+    display: inline-block;
+    border-bottom: 1px dotted transparent!important;
+}
+
+.experimental .story-meta svg {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    height: 13px;
+    width: 13px;
+    margin-right: 4px;
+    color: #d0d0d0!important;
+}
+
+.experimental .story-separator {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.experimental .story-meta a:focus, .experimental .story-meta a:hover {
+    text-decoration: none;
+    border-bottom: 1px dotted #ccc!important;
+}

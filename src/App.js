@@ -35,6 +35,9 @@ function App() {
   const [optionLogin, setOptionLogin] = useState(() => {
     return LocalStorage.getItemSetting("login");
   });
+  const [isShowThumbnails, showThumbnails] = useState(() => {
+    return LocalStorage.getItemSetting("showThumbnails");
+  });
   return (
     <div className={theme()}>
       <div className="container">
@@ -51,6 +54,7 @@ function App() {
                     isThemeLight={isThemeLight}
                     changeThemeLight={() => changeThemeLight(!isThemeLight)}
                     changeVisibleSidebar={() => changeVisibleSidebar(!isVisibleSidebar)}
+                    showThumbnails={(isShowImage) => showThumbnails(isShowImage)}
                     {...props}
                   />)
               }
@@ -65,6 +69,7 @@ function App() {
                     isThemeLight={isThemeLight}
                     changeThemeLight={() => changeThemeLight(!isThemeLight)}
                     isDefaultStyle={isDefaultStyle}
+                    isShowThumbnails={isShowThumbnails}
                   />
                 )
               } />

@@ -21,3 +21,13 @@
     text-decoration: underline;
 }
 
+.experimental.light .story-title a:visited {
+    color: rgba(33,36,61,.5);
+}
+
+.experimental .story-title a {
+    transition: color .1s linear;
+    color: #5c5c5c;
+    font-size: 16px;
+    font-weight: 400;
+}

@@ -17,7 +17,21 @@ import '../.././assets/css/setting/Setting.css';
 export default class Setting extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        const setting = LocalStorage.getObjectSetting();
+        const defaultSetting = this.getDefaultSetting();
+        this.state = !_.isNull(setting) ? { ...setting } : defaultSetting;
+    }
+
+    componentDidMount() {
+        const isExistsDefaultSetting = _.isNull(LocalStorage.getObjectSetting());
+        if (isExistsDefaultSetting) {
+            const defaultSetting = this.getDefaultSetting();
+            LocalStorage.saveValueSetting(defaultSetting);
+        }
+    }
+
+    getDefaultSetting = () => {
+        return {
             authorText: false,
             defaultDateRange: "Last week",
             defaultSort: "Most recent first",
@@ -29,16 +43,7 @@ export default class Setting extends React.Component {
             style: "Default",
             typoTolerance: false,
             visibleThumbnails: false,
-        }
-    }
-
-    componentDidMount() {
-        const setting = LocalStorage.getObjectSetting();
-        if (!_.isNull(setting)) {
-            this.setState({
-                ...setting,
-            });
-        }
+        };
     }
 
     handleStyle = (style) => {
@@ -53,16 +58,15 @@ export default class Setting extends React.Component {
 
     applySetting = () => {
         const prevStyle = LocalStorage.getItemSetting('style');
-        const isFirstApply = _.isNull(prevStyle);
-        if (!_.isEqual(prevStyle, this.state.style) && !isFirstApply) {
+        if (!_.isEqual(prevStyle, this.state.style)) {
             this.props.changeDefaultLight();
             this.props.changeVisibleSidebar();
         }
         this.props.setOptionLogin(this.state.login);
+        this.props.showThumbnails(this.state.showThumbnails);
         LocalStorage.saveValueSetting(this.state);
     }
     render() {
-        console.log("Hit per page " + this.state.hitsPerPage);
         return (
             <React.Fragment>
                 <Header visibleSearchBar={false} url="/" icon="fa fa-arrow-left" textIcon="Back" />

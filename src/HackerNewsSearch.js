@@ -20,7 +20,7 @@ const HackerNewSearch = props => {
                     />
                 )
             }
-            <SearchResult isDefaultStyle={props.isDefaultStyle}/>
+            <SearchResult isDefaultStyle={props.isDefaultStyle} isShowThumbnails={props.isShowThumbnails}/>
             <Pagination />
             <Footer />
         </React.Fragment>

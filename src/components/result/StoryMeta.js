@@ -1,24 +1,21 @@
 import React from 'react';
+import StoryPoint from './StoryPoint';
+import StoryAuthor from './StoryAuthor';
+import StoryTime from './StoryTime';
+import StoryComment from './StoryComment';
+import StoryLink from './StoryLink';
 import '../.././assets/css/result/StoryMeta.css';
 
-const meta = () => {
+const meta = (props) => {
     return (
         <div className="story-meta">
-            <span>
-                <a href="https://news.ycombinator.com/item?id=16582136">6015 point</a>
-            </span>
+            <StoryPoint isDefaultStyle={props.isDefaultStyle} />
             <span className="story-separator">|</span>
-            <span>
-                <a href="https://news.ycombinator.com/item?id=16582136">Cogito</a>
-            </span>
+            <StoryAuthor isDefaultStyle={props.isDefaultStyle} />
             <span className="story-separator">|</span>
-            <span>
-                <a href="https://news.ycombinator.com/item?id=16582136">3 years ago</a>
-            </span>
+            <StoryTime isDefaultStyle={props.isDefaultStyle} />
             <span className="story-separator">|</span>
-            <span>
-                <a href="https://news.ycombinator.com/item?id=16582136">436 comments</a>
-            </span>
+            {props.isDefaultStyle ? <StoryComment /> : <StoryLink />}
         </div>
     );
 }

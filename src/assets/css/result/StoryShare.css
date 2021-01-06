@@ -38,7 +38,6 @@
 }
 
 .experimental .story-share button {
-    padding: 0;
     margin: 0 8px;
     border: none;
     color: #9d9d9d;
@@ -65,14 +64,6 @@
 .experimental.light .story-starred {
     color: #dbddea!important;
     line-height: 1.5px;
-}
-
-.experimental .story-share button {
-    padding: 0;
-    margin: 0 8px;
-    border: none;
-    color: #9d9d9d;
-    background-color: transparent;
 }
 
 .experimental .story-share svg {

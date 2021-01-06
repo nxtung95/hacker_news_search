@@ -6,16 +6,16 @@ const result = (props) => {
     return (
         <section className="search-result">
             <div className="container">
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
-                <Story isDefaultStyle={props.isDefaultStyle}/>
+                <Story {...props}/>
+                <Story {...props}/>
+                <Story {...props}/>
+                <Story {...props}/>
+                <Story {...props}/>
+                <Story {...props}/>
+                <Story {...props}/>
+                <Story {...props}/>
+                <Story {...props}/>
+                <Story {...props}/>
             </div>
         </section>
     );
