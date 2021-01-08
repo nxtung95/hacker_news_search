@@ -15,7 +15,7 @@ const meta = (props) => {
             <span className="story-separator">|</span>
             <StoryTime isDefaultStyle={props.isDefaultStyle} />
             <span className="story-separator">|</span>
-            {props.isDefaultStyle ? <StoryComment /> : <StoryLink />}
+            {props.isDefaultStyle ? <StoryComment /> : <StoryLink isShortLink={true}/>}
         </div>
     );
 }

@@ -1,10 +1,12 @@
 import React from 'react';
+import PSL from 'psl';
 import '../.././assets/css/result/StoryLink.css';
 
-const StoryLink = () => {
+const StoryLink = (props) => {
+    const fullUrl = "http://www.bbc.com/news/uk-43396008";
     return (
-        <a href="http://www.bbc.com/news/uk-43396008" className="story-link">
-            (http://www.bbc.com/news/uk-43396008)
+        <a href={fullUrl} className="story-link">
+            {props.isShortLink ? PSL.get(fullUrl) : fullUrl}
         </a>
     );
 }

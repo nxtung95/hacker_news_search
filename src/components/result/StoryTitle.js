@@ -8,7 +8,7 @@ const StoryTitle = (props) => {
             <a href="https://news.ycombinator.com/item?id=16582136">Stephen Hawking has died</a>
             {
                 props.isDefaultStyle && (
-                    <StoryLink />
+                    <StoryLink isShortLink={false}/>
                 )
             }
         </div>

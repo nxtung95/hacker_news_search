@@ -21,6 +21,7 @@
 .experimental.light .filter {
     color: rgba(33,36,61,.5);
     background-color: #f5f5fa;
+    z-index: 1000;
 }
 
 .experimental.dark .filter {

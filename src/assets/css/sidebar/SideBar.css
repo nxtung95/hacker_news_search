@@ -1,5 +1,6 @@
 .experimental.light .sidebar {
     background-color: #f5f5fa;
+    z-index: 99999;
 }
 
 .experimental.dark .sidebar {
