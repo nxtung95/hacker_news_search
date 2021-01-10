@@ -17,6 +17,7 @@ const HackerNewSearch = props => {
                         isThemeLight={props.isThemeLight}
                         changeThemeLight={props.changeThemeLight}
                         login={props.login}
+                        path={props.match.path}
                     />
                 )
             }

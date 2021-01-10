@@ -6,12 +6,12 @@
     align-items: center;
     text-align: right;
 }
-.experimental.light .story-share button.story-comment:focus:not(:disabled), .experimental .story-share button.story-comment:hover:not(:disabled) {
+.experimental.light .story-share button.total-comment:focus:not(:disabled), .experimental .story-share button.total-comment:hover:not(:disabled) {
     color: #fff!important;
     background-color: #3a416f!important;
 }
 
-.experimental.light .story-comment:focus:not(:disabled):before, .experimental.light .story-comment:hover:not(:disabled):before {
+.experimental.light .total-comment:focus:not(:disabled):before, .experimental.light .total-comment:hover:not(:disabled):before {
     border-right: 6px solid #3a416f!important;
 }
 
@@ -20,7 +20,7 @@
     fill: #3a416f!important;
 }
 
-.experimental .story-share button.story-comment {
+.experimental .story-share button.total-comment {
     background-color: #939393;
     color: #fff;
     font-size: 12px;
@@ -32,7 +32,7 @@
     border-radius: 2px;
 }
 
-.experimental.light .story-comment {
+.experimental.light .total-comment {
     color: rgba(33,36,61,.8)!important;
     background-color: #dbddea!important;
 }
@@ -45,7 +45,7 @@
     outline: none;
 }
 
-.experimental .story-share button.story-comment:before {
+.experimental .story-share button.total-comment:before {
     content: "";
     height: 0;
     width: 0;
@@ -57,7 +57,7 @@
     bottom: -6px;
 }
 
-.experimental.light button.story-comment:before {
+.experimental.light button.total-comment:before {
     border-right: 6px solid #dbddea!important;
 }
 

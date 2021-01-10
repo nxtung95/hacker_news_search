@@ -5,7 +5,7 @@ import '../.././assets/css/result/StoryShare.css';
 const StoryShare = () => {
     return (
         <div className="story-share">
-            <button className="story-comment">210</button>
+            <button className="total-comment">210</button>
             <StorySocialShare isFilter={false} />
             <button className="story-starred">
                 <svg

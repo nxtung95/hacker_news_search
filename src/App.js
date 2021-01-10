@@ -60,6 +60,71 @@ function App() {
               }
               />
               <Route exact path="/about" component={About} />
+              <Route exact path="/hot" render={
+                props => (
+                  <HackerNewsSearch
+                    {...props}
+                    visibleSidebar={isVisibleSidebar}
+                    login={optionLogin}
+                    isThemeLight={isThemeLight}
+                    changeThemeLight={() => changeThemeLight(!isThemeLight)}
+                    isDefaultStyle={isDefaultStyle}
+                    isShowThumbnails={isShowThumbnails}
+                  />
+                )
+              } />
+              <Route exact path="/show-hn" render={
+                props => (
+                  <HackerNewsSearch
+                    {...props}
+                    visibleSidebar={isVisibleSidebar}
+                    login={optionLogin}
+                    isThemeLight={isThemeLight}
+                    changeThemeLight={() => changeThemeLight(!isThemeLight)}
+                    isDefaultStyle={isDefaultStyle}
+                    isShowThumbnails={isShowThumbnails}
+                  />
+                )
+              } />
+              <Route exact path="/ask-hn" render={
+                props => (
+                  <HackerNewsSearch
+                    {...props}
+                    visibleSidebar={isVisibleSidebar}
+                    login={optionLogin}
+                    isThemeLight={isThemeLight}
+                    changeThemeLight={() => changeThemeLight(!isThemeLight)}
+                    isDefaultStyle={isDefaultStyle}
+                    isShowThumbnails={isShowThumbnails}
+                  />
+                )
+              } />
+              <Route exact path="/polls" render={
+                props => (
+                  <HackerNewsSearch
+                    {...props}
+                    visibleSidebar={isVisibleSidebar}
+                    login={optionLogin}
+                    isThemeLight={isThemeLight}
+                    changeThemeLight={() => changeThemeLight(!isThemeLight)}
+                    isDefaultStyle={isDefaultStyle}
+                    isShowThumbnails={isShowThumbnails}
+                  />
+                )
+              } />
+              <Route exact path="/jobs" render={
+                props => (
+                  <HackerNewsSearch
+                    {...props}
+                    visibleSidebar={isVisibleSidebar}
+                    login={optionLogin}
+                    isThemeLight={isThemeLight}
+                    changeThemeLight={() => changeThemeLight(!isThemeLight)}
+                    isDefaultStyle={isDefaultStyle}
+                    isShowThumbnails={isShowThumbnails}
+                  />
+                )
+              } />
               <Route exact path="/" render={
                 props => (
                   <HackerNewsSearch
