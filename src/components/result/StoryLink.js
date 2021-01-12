@@ -1,11 +1,12 @@
 import React from 'react';
 import '../.././assets/css/result/StoryLink.css';
+import _ from 'lodash';
 
 const StoryLink = (props) => {
-    const url = new URL("http://www.bbc.com/news/uk-43396008");
+    const storyUrl = _.isUndefined(props.storyUrl) ? "" : new URL(props.storyUrl);
     return (
-        <a href={url.href} className="story-link">
-            {props.isShortLink ? `(${url.hostname})` : `(${url.href})`}
+        <a href={storyUrl.href} className="story-link">
+            {props.isShortLink ? `(${storyUrl.hostname})` : `(${storyUrl.href})`}
         </a>
     );
 }

@@ -21,7 +21,7 @@ const point = (props) => {
         <span>
             <a href="https://news.ycombinator.com/item?id=16582136">
                 {!props.isDefaultStyle ? getSVGHeart() : null}
-                6015 points
+                {props.point} points
             </a>
         </span>
     );

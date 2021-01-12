@@ -2,10 +2,10 @@ import React from 'react';
 import StorySocialShare from '../filter/FilterEngineProcess';
 import '../.././assets/css/result/StoryShare.css';
 
-const StoryShare = () => {
+const StoryShare = (props) => {
     return (
         <div className="story-share">
-            <button className="total-comment">210</button>
+            <button className="total-comment">{props.totalComment}</button>
             <StorySocialShare isFilter={false} />
             <button className="story-starred">
                 <svg

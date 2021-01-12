@@ -1,4 +1,5 @@
 import React from 'react';
+import { Date } from 'core-js';
 
 const getSVGTime = () => {
     return (
@@ -19,11 +20,13 @@ const getSVGTime = () => {
 }
 
 const time = (props) => {
+    const time = new Date(props.postedTime * 1000);
+    const now = Date.now();
     return (
         <span>
             <a href="https://news.ycombinator.com/item?id=16582136">
                 {!props.isDefaultStyle ? getSVGTime() : null}
-                3 years ago
+                {now}
             </a>
         </span>
     );

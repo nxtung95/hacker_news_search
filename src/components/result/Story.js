@@ -13,10 +13,10 @@ const story = (props) => {
                         <StoryImage />
                     )
                 }
-                <StoryData isDefaultStyle={props.isDefaultStyle} />
+                <StoryData isDefaultStyle={props.isDefaultStyle} story={props.story} />
                 {
                     !props.isDefaultStyle && (
-                        <StoryShare />
+                        <StoryShare totalComment={props.story.descendants} />
                     )
                 }
             </div>

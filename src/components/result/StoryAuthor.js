@@ -22,7 +22,7 @@ const author = (props) => {
         <span>
             <a href="https://news.ycombinator.com/item?id=16582136">
                 {!props.isDefaultStyle ? getSVGAuthor() : null}
-                Cogito
+                {props.author}
             </a>
         </span>
     );
