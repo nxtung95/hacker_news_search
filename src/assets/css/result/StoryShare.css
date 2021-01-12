@@ -15,11 +15,6 @@
     border-right: 6px solid #3a416f!important;
 }
 
-.experimental.light .story-starred:hover:not(:disabled) svg {
-    color: #3a416f!important;
-    fill: #3a416f!important;
-}
-
 .experimental .story-share button.total-comment {
     background-color: #939393;
     color: #fff;
@@ -68,4 +63,10 @@
 
 .experimental .story-share svg {
     width: 18px;
+}
+
+.experimental.light .story-starred.active svg,
+.experimental.light .story-starred:hover:not(:disabled) svg {
+    color: #3a416f!important;
+    fill: #3a416f!important;
 }

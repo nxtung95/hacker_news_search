@@ -5,7 +5,6 @@ import _ from 'lodash';
 
 export default class ListItem extends React.Component {
     render() {
-        console.log(this.props);
         return (
             <ul>
                 <li>
