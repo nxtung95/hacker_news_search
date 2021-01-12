@@ -12,6 +12,7 @@ const meta = (props) => {
     const author = props.story.by;
     const postedTime = props.story.time;
     const totalComment = props.story.descendants;
+    const text = props.story.text;
     return (
         <div className="story-meta">
             <StoryPoint isDefaultStyle={props.isDefaultStyle} point={point} />
@@ -21,7 +22,7 @@ const meta = (props) => {
             <StoryTime isDefaultStyle={props.isDefaultStyle} postedTime={postedTime} />
             <span className="story-separator">|</span>
             {props.isDefaultStyle ? <TotalComment totalComment={totalComment} /> : <StoryLink isShortLink={true} storyUrl={props.story.url} />}
-            <StoryComment />
+            <StoryComment text={text} />
         </div>
     );
 }

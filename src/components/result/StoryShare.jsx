@@ -19,7 +19,7 @@ export default class StoryShare extends React.Component {
     render() {
         return (
             <div className="story-share">
-                <button className="total-comment">{props.totalComment}</button>
+                <button className="total-comment">{this.props.totalComment}</button>
                 <StorySocialShare isFilter={false} />
                 <button className={this.state.isActiveStarred ? "story-starred active" : "story-starred"} onClick={this.activeStoryStarred}>
                     <svg

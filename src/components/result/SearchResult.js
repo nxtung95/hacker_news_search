@@ -29,6 +29,7 @@ export default class SearchResult extends React.Component {
     }
 
     render() {
+        console.log(this.state.stories);
         return (
             <section className="search-result">
                 <div className="container">
