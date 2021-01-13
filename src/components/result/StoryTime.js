@@ -20,7 +20,7 @@ const getSVGTime = () => {
 }
 
 const time = (props) => {
-    const time = new Date(props.postedTime * 1000);
+    // const time = new Date(props.postedTime * 1000);
     const now = Date.now();
     return (
         <span>

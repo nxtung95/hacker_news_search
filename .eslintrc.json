@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 16,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "jam3"
+    ],
+    "rules": {
+        "react/prop-types": 0,
+        "jam3/no-sanitizer-with-danger": [
+            2,
+            {
+              "wrapperName": ["sanitizer"]
+            }
+          ]
+    }
+}

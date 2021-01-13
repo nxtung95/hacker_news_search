@@ -23,7 +23,7 @@ const paginate = () => {
                 <button>6</button>
             </li>
             <li className="pagination-item">
-                <button>>></button>
+                <button>&gt&gt</button>
             </li>
         </ul>
     );

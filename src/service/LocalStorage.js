@@ -16,7 +16,7 @@ const getItemSetting = itemName => {
     if (_.isNull(item)) {
         return null;
     }
-    if (!item.hasOwnProperty(itemName)) {
+    if (!Object.prototype.hasOwnProperty.call(item, itemName)) {
         return null;
     }
     return item[itemName];

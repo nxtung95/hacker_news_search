@@ -3,7 +3,7 @@ import axios from 'axios';
 const getAllIdNewStories = () => {
     return axios({
         method: 'get',
-        url: 'https://hacker-news.firebaseio.com/v0/beststories.json',
+        url: 'https://hacker-news.firebaseio.com/v0/newstories.json',
         params: {
             orderBy: JSON.stringify("$key"),
             limitToFirst: 30,
