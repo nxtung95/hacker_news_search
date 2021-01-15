@@ -9,7 +9,7 @@ import _ from 'lodash';
 const SideBar = props => {
     return (
         <aside className="sidebar">
-            <ListItem path={props.path}/>
+            <ListItem path={props.path} callbackGetData={props.callbackGetData}/>
             {
                 !_.isEmpty(props.login) && (
                     <OptionLogin login={props.login}/>

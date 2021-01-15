@@ -5,10 +5,11 @@ import _ from 'lodash';
 
 export default class ListItem extends React.Component {
     render() {
+        const path = this.props.path;
         return (
             <ul>
                 <li>
-                    <Link to="/" className={_.isEqual("/", this.props.path) ? "active" : ""}>
+                    <Link to="/" className={_.isEqual("/", path) ? "active" : ""}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -26,7 +27,7 @@ export default class ListItem extends React.Component {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/hot" className={_.isEqual("/hot", this.props.path) ? "active" : ""}>
+                    <Link to="/hot" className={_.isEqual("/hot", path) ? "active" : ""}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -43,7 +44,7 @@ export default class ListItem extends React.Component {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/show-hn" className={_.isEqual("/show-hn", this.props.path) ? "active" : ""}>
+                    <Link to="/show-hn" className={_.isEqual("/show-hn", path) ? "active" : ""}>
                         <svg xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
@@ -59,7 +60,7 @@ export default class ListItem extends React.Component {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/ask-hn" className={_.isEqual("/ask-hn", this.props.path) ? "active" : ""}>
+                    <Link to="/ask-hn" className={_.isEqual("/ask-hn", path) ? "active" : ""}>
                         <svg xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
@@ -75,7 +76,7 @@ export default class ListItem extends React.Component {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/polls" className={_.isEqual("/polls", this.props.path) ? "active" : ""}>
+                    <Link to="/polls" className={_.isEqual("/polls", path) ? "active" : ""}>
                         <svg xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
@@ -93,7 +94,7 @@ export default class ListItem extends React.Component {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/jobs" className={_.isEqual("/jobs", this.props.path) ? "active" : ""}>
+                    <Link to="/jobs" className={_.isEqual("/jobs", path) ? "active" : ""} onClick={() => {this.props.callbackGetData('/jobs')}} >
                         <svg xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"

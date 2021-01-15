@@ -1,12 +1,29 @@
 import React from 'react';
+// import PreviewURLAPI from '../.././service/PreviewURLAPI';
 import '../.././assets/css/result/StoryImage.css';
 
-const StoryImage = () => {
-    return (
-        <div className="story-image">
-            <img loading="lazy" alt="thumbnail for result" src="https://drcs9k8uelb9s.cloudfront.net/25612223.png" />
-        </div>
-    );
-}
+export default class StoryImage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            imageURL: '',
+        }
+    }
 
-export default StoryImage;
+    // async componentDidMount() {
+    //     const result = await PreviewURLAPI.previewImageURL(this.props.imgURL);
+    //     if (result.status === 200) {
+    //         this.setState({
+    //             imageURL: result.data.image,
+    //         });
+    //     }
+    // }
+
+    render() {
+        return (
+            <div className="story-image">
+                <img loading="lazy" alt="thumbnail for result" src={this.state.imageURL} />
+            </div>
+        );
+    }
+}

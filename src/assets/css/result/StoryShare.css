@@ -70,3 +70,8 @@
     color: #3a416f!important;
     fill: #3a416f!important;
 }
+
+.experimental .story-share button.total-comment:disabled {
+    cursor: not-allowed;
+    opacity: .7;
+}

@@ -10,7 +10,7 @@ const story = (props) => {
             <div className="story-container">
                 {
                     (!props.isDefaultStyle && props.isShowThumbnails) && (
-                        <StoryImage />
+                        <StoryImage imgURL={props.story.url} />
                     )
                 }
                 <StoryData isDefaultStyle={props.isDefaultStyle} story={props.story} />

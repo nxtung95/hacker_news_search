@@ -1,5 +1,5 @@
 import React from 'react';
-import { Date } from 'core-js';
+import TimeUtility from '../.././utility/TimeUtility';
 
 const getSVGTime = () => {
     return (
@@ -20,13 +20,14 @@ const getSVGTime = () => {
 }
 
 const time = (props) => {
-    // const time = new Date(props.postedTime * 1000);
-    const now = Date.now();
+    const current = Date.now();
+    const postedTime = new Date(props.postedTime * 1000);
+    const time = TimeUtility.timeDifference(current, postedTime);
     return (
         <span>
             <a href="https://news.ycombinator.com/item?id=16582136">
                 {!props.isDefaultStyle ? getSVGTime() : null}
-                {now}
+                {time}
             </a>
         </span>
     );
